@@ -11,10 +11,11 @@ conda activate eventfulness
 # Change this pytorch1.9.1 installation line based on your machine specification: https://pytorch.org/get-started/previous-versions/#v191
 # Also, please use the pip option provided by pytorch since conda would take forever to resolve the conflicts
 # The program assume that a CUDA GPU is available, so you should build this on an environment with CUDA GPU
-pip3 install torch==1.9.1+cu111 torchvision==0.10.1+cu111 torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html
+pip3 install numpy==1.26.0
+pip3 install torch==1.9.1 torchvision==0.10.1 torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html
 pip3 install librosa matplotlib
 pip3 install psutil
-pip3 install torchmetrics
+pip3 install torchmetrics==0.7.0
 pip3 install tensorboard
 pip3 install setuptools==59.5.0
 pip3 install setuptools

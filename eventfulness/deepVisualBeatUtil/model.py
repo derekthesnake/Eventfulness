@@ -49,7 +49,7 @@ class VisBeatDetectionModel(object):
     def fromSavedModel(cls, model_dir, load_epoch, ngpu):
         model_path = VisBeatDetectionModel.encode_model_checkpoint_str(model_dir, load_epoch, 'model')
         print(f"Start loading in model from {model_path}")
-        checkpoint = torch.load(model_path, map_location = "cuda:0")
+        checkpoint = torch.load(model_path, map_location = torch.device("cpu"))
         model_config = checkpoint['model_config']
         model_type = checkpoint['model_type']
         layer_num = checkpoint['layer_num']
